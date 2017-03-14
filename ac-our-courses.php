@@ -1,6 +1,7 @@
 <?php
 /*
 Plugin name: our courses
+Author: Alexander Chamwada
 Author URI: http://www.progressivemediagroup.com/
 Version: 1.1
 Description: Our Courses courses plugin
