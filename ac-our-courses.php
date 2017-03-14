@@ -1,11 +1,57 @@
 <?php
 /*
-Plugin Name: WP Courses
-Plugin URI: http://www.progressivemediagroup.com/
-Description: Add courses
-Version: 1.0.0
-Author: Alex
+Plugin name: our courses
+Author URI: http://www.progressivemediagroup.com/
+Version: 1.1
+Description: Our Courses courses plugin
+
+
 */
+?>
+<?php
+add_action( 'init', 'presscourses' );
+function presscourses() {
+  register_post_type( 'my_courses',
+    array(
+      'labels' => array(
+        'name' => __( 'Our Courses' ),
+        'singular_name' => __( 'Course' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      
+  'description' => 'Courses here',
+  
+  'menu_position' => 20,
+  'supports' => array( 
+					  	'title', 
+					  'editor', 
+					  'excerpt', 
+					  'thumbnail', 
+					  'custom-fields', 
+					  'revisions'  )
+    )
+  );
+  create_my_tax();
+
+
+
+}
+
+function create_my_tax() {
+	register_taxonomy(
+		'course_category',
+		'my_courses',
+		array(
+			'label' => __( 'Course Categories' ),
+			'rewrite' => array( 'slug' => 'course_category' ),
+			'hierarchical' => true,
+		)
+	);
+
+}
+
+
 
 add_action('wp_ajax_myCourses' , 'collect_courses');
 add_action('wp_ajax_nopriv_myCourses' , 'collect_courses');
@@ -245,9 +291,4 @@ function search_by_location(){
 
 }
 }
-
-
-
-
-
 ?>
