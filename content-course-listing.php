@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content
  *
- *  Template Name: Course Listing 12343
+ *  Template Name: Course Listing
  * @package WordPress
  * @subpackage Twenty_Sixteen
  * @since Twenty Sixteen 1.0
@@ -21,31 +21,6 @@ get_header(); ?>
 	
 </header>
 
-
-<div id="primary" class="content-area">
-<div class="jobs-ctas">
-<!--Advertise a course section-->
-<!--<div class="row">
-		<input type="button" class="course_application advertise_btn" value="Advertise Course" >
-		
-		<div class="course_advertisement" style="display: none;">
-		<br/>
-			<p class="selectionShareable advertise_color"><strong>To advertise your journalism course in this directory contact Kalpesh Vadher  on 0203 096 2261 or </strong> <a  class="advertise_color" href="mailto:kalpesh.vadher@pressgazette.co.uk?subject=To advertise your journalism course">kalpesh.vadher@pressgazette.co.uk</a></p>
-					<p class="selectionShareable advertise_color" >
-						Apply using webmail: 
-						<a  href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=kalpesh.vadher@pressgazette.co.uk&amp;su=To advertise your journalism course" target="_blank" class="advertise_color">Gmail</a> / 
-						
-						<a  href="http://webmail.aol.com/Mail/ComposeMessage.aspx?to=kalpesh.vadher@pressgazette.co.uk&amp;subject=To advertise your journalism course" target="_blank" class="advertise_color">AOL</a> / 
-						
-						<a  href="http://compose.mail.yahoo.com/?to=kalpesh.vadher@pressgazette.co.uk&amp;subject=To advertise your journalism course" target="_blank" class="advertise_color">Yahoo</a> / 
-						
-						<a  href="http://mail.live.com/mail/EditMessageLight.aspx?n=&amp;to=kalpesh.vadher@pressgazette.co.uk&amp;subject=To advertise your journalism course" target="_blank" class="advertise_color">Outlook</a>
-
-					</p>		</div>
-			</div>-->
-		
-	</div>
-	</div>
 	<div class="row">
 	<div class="large-12 columns">
 		<main id="main" class="site-main" role="main">
@@ -54,8 +29,8 @@ get_header(); ?>
 					<?php twentysixteen_post_thumbnail(); ?>
 					<div class="row">
 						<div class="large-12 columns entry-content-about">
-							<form class="job_filters" method="Post">
-							<div class="search_jobs">
+							<form class="course_filters" method="Post">
+							<div class="search_course">
 		
 		<div class="search_keywords">
 			<label for="search_keywords">Keywords</label>
@@ -69,7 +44,7 @@ get_header(); ?>
 
 		
 			</div>
-			<ul class="job_types">
+			<ul class="course_types">
 									<?php 
 
 										$my_query = new WP_Query();
@@ -94,8 +69,8 @@ get_header(); ?>
 
 									
 									</ul>
-									<input type="hidden" name="filter_job_type[]" value="">
-									<div class="showing_jobs wp-job-manager-showing-all" style="display: none;"></div></form>
+									<input type="hidden" name="filter_course_type[]" value="">
+									<div class="showing_course" style="display: none;"></div></form>
 
 								<div  class="the_result" style="display: none">	
 								
@@ -368,7 +343,7 @@ $("#search_keywords").enterKey(function () {
     var ajaxurl = '<?php echo admin_url("admin-ajax.php"); ?>';
     jQuery(function($) {
         $('body').on('keyup', '#search_keywords', function() {
-        	 jQuery('.job_listing').css("display","none"); 
+        	 jQuery('.course_listing').css("display","none"); 
 
         	 $('.the_error').css("display","none");
         });
@@ -435,13 +410,12 @@ $("#search_location").enterKey(function () {
     var ajaxurl = '<?php echo admin_url("admin-ajax.php"); ?>';
     jQuery(function($) {
         $('body').on('keyup', '#search_location', function() {
-        	 jQuery('.job_listing').css("display","none"); 
+        	 jQuery('.course_listing').css("display","none"); 
 
         	 $('.the_error').css("display","none");
         });
     });
 </script>
-
 
 
 
