@@ -98,7 +98,7 @@ get_header(); ?>
 									<div class="showing_jobs wp-job-manager-showing-all" style="display: none;"></div></form>
 
 								<div  class="the_result" style="display: none">	
-								<!--<ul class="job_listings">-->
+								
 			
 				
 				</div>
