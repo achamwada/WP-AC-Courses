@@ -87,14 +87,14 @@ function collect_courses()
             }
             
             $cont .= "<ul class=' $featured  course_listings $my_cat_ID'>
-                                
-                                    <li class='course_listing $featured_class'  style='visibility: visible;'>
-                                    <a href='$my_url' class='the_ftd_img '>
-                                    $featuredimg
-                                    <div class='position'><h3>$my_title</h3><div class='company'></div></div>
-                                    <div class='location'>$location</div>
-                                    <ul class='meta'><li class='course-type education'> </li>
-                                    <li class='date'><date> </date></li></ul></a></li></ul>";
+	    		    <li class='course_listing $featured_class'  style='visibility: visible;'>
+			    <a href='$my_url' class='the_ftd_img '>
+			    $featuredimg
+			    <div class='position'><h3>$my_title</h3><div class='company'></div></div>
+			    <div class='location'>$location</div>
+			    <ul class='meta'><li class='course-type education'> </li>
+			    <li class='date'><date> </date></li></ul></a></li>
+			</ul>";
             
         }
         
@@ -151,14 +151,14 @@ function search_courses()
             }
             if ($percent > 50) {
                 $cont .= "<ul class=' $featured  course_listings '>
-                                    
-                                        <li class='course_listing $featured_class'  style='visibility: visible;'>
-                                        <a href='$my_url' class='the_ftd_img'>
-                                        $featuredimg
-                                        <div class='position'><h3>$my_title</h3><div class='company'></div></div>
-                                        <div class='location'>$location</div>
-                                        <ul class='meta'><li class='course-type education'> </li>
-                                        <li class='date'><date> </date></li></ul></a></li></ul>";
+				<li class='course_listing $featured_class'  style='visibility: visible;'>
+				<a href='$my_url' class='the_ftd_img'>
+				$featuredimg
+				<div class='position'><h3>$my_title</h3><div class='company'></div></div>
+				<div class='location'>$location</div>
+				<ul class='meta'><li class='course-type education'> </li>
+				<li class='date'><date> </date></li></ul></a></li>
+			  </ul>";
             }
             
             
